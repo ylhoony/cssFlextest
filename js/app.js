@@ -2,16 +2,15 @@ console.log('app.js loaded');
 
 $(() => {
 
-  $('.menu-bar').click(() => {
-    alert('this is test');
-  });
+  // $('.menu-bar').on('click', () => {
+  //   alert('this is test x');
+  // });
 
-  $('.nav-demand').click(() => {
-    let $demandDropdown = $('<ul>');
-
-    $(this).append($demandDropdown);
-    // $($dropdownUl).append('li')
-  });
-
+  // $('.nav-demand').on('mouseenter', function() {
+  //   $('.nav-demand-ul').css('display','unset');
+  // });
+  // $('.nav-demand').on('mouseleave', function() {
+  //   $('.nav-demand-ul').css('display','none');
+  // });
 
 })
