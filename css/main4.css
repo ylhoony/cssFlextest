@@ -35,6 +35,13 @@ body {
 
 .nav ul {
   list-style: none;
+  /*height: 100%;*/
+}
+
+.nav-menu a {
+  color: inherit;
+  /*line-height: 40px;*/
+  text-decoration: none;
 }
 
 .nav-menu,
@@ -47,19 +54,18 @@ body {
   /*position: relative;*/  /*dropdown test*/
 }
 
+/*.nav-menu a,*/
 .nav-list {
   display: none;
 }
 
 .nav-menu li a,
-.nav-icon li i,
-.nav-icon li a,
+.nav-icon li,
 .nav-search li {
   color: #fff;
-  display: block;
+  /*display: block;*/
   line-height: 60px;
-  padding: 0 10px;
-  text-decoration: none;
+  padding: 10px;
 }
 
 .nav-search {
@@ -70,8 +76,8 @@ body {
   width: 100%;
 }
 
-.nav-icon li i {
-  line-height: 60px;
+.nav-icon li {
+  line-height: 40px;
 }
 
 .nav-search li form input {
@@ -81,16 +87,14 @@ body {
 }
 
 .nav-menu a:hover,
-.nav-icon li i:hover,
-.nav-icon li a:hover {
+.nav-icon li i:hover {
   color: #FF7733;
 }
 
-.dropdown-menu {
-  position: relative;
-}
+/* dropdown */
 
-.dropdown-menu .dropdown-content-left {
+.nav-demand + .nav-demand-ul,
+.dropdown-menu + .dropdown-content {
   background-color: #fff;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   color: #eee;
@@ -100,21 +104,37 @@ body {
   position: absolute;
   top: 60px;
   z-index: 1;
-  left: 0;
 }
 
-.dropdown-menu .dropdown-content-right {
-  background-color: #fff;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  color: #eee;
-  display: none;
-  min-width: 160px;
-  padding: 0;
-  position: absolute;
-  top: 60px;
-  z-index: 1;
-  right: 0;
+/*.dropdown-content a {
+  line-height: normal;
+}*/
+
+.nav-demand + .nav-demand-ul {
+  left: 59.16px;
 }
+
+.nav-supply + .nav-supply-ul {
+  left: 127.56px;
+}
+
+.nav-product + .nav-product-ul {
+  left: 187.40px;
+}
+
+.nav-warehouse + .nav-warehouse-ul {
+  left: 252.69px;
+}
+
+.nav-logistics + .nav-logistics-ul {
+  left: 336.71px;
+}
+
+.nav-report + .nav-report-ul {
+  left: 407.92px;
+}
+
+
 
 /* dropdown menu end */
 
@@ -151,7 +171,6 @@ body {
   justify-content: center;
   flex-flow: column wrap;
   margin: 0 auto;
-
   padding: 20px;
 }
 
@@ -273,28 +292,37 @@ body {
 
 /* dropdown test */
 
-  .dropdown-content-left li a,
-  .dropdown-content-right li a {
+/*  .nav-demand-ul a,
+  .nav-supply-ul a,
+  .nav-product-ul a,
+  .nav-warehouse-ul a,
+  .nav-logistics-ul a,
+  .nav-report-ul a*/
+  .dropdown-content a {
+    /*float: none;*/
     color: black;
     display: block;
     line-height: normal;
     padding: 10px;
     text-decoration: none;
     text-align: left;
-    width: 100%;
   }
 
   /* Change color of dropdown links on hover */
 
-  .dropdown-content-left a:hover,
-  .dropdown-content-right a:hover {
-    background-color: #f1f1f1;
+  .dropdown-content a:hover {
+    background-color: #f1f1f1
   }
 
   /* Show the dropdown menu on hover */
-  .dropdown-menu:hover .dropdown-content-left,
-  .dropdown-menu:hover .dropdown-content-right {
-    display: block;
+  .nav-demand:hover + .nav-demand-ul,
+  .nav-supply:hover + .nav-supply-ul,
+  .nav-product:hover + .nav-product-ul,
+  .nav-warehouse:hover + .nav-warehouse-ul,
+  .nav-logistics:hover + .nav-logistics-ul,
+  .nav-report:hover + .nav-report-ul,
+  .dropdown-menu:hover + .dropdown-content {
+      display: block;
   }
 
 
@@ -323,7 +351,7 @@ body {
   .nav {
     /*justify-content: flex-start;*/
     font-size: 1em;
-    /*font-weight: bold;*/
+    font-weight: bold;
   }
 
 

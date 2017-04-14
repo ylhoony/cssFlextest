@@ -2,7 +2,7 @@
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
-    position: relative;  /* checked */
+    /*position: relative;*/  /* checked */
     /*display: inline-block;*/
 }
 
@@ -16,7 +16,7 @@
     cursor: pointer;*/
 }
 
-/* Dropdown Content (Hidden by Default) */
+/* Dropdown Content (Hidden by Default) checked */
 .dropdown-content {
     display: none;
     position: absolute;
