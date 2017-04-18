@@ -1,31 +1,8 @@
-console.log('app.js loaded');
-
-$(() => {
-
-  // $('.menu-bar').on('click', () => {
-  //   alert('this is test x');
-  // });
-
-  // $('.nav-demand').on('mouseenter', function() {
-  //   $('.nav-demand-ul').css('display','unset');
-  // });
-  // $('.nav-demand').on('mouseleave', function() {
-  //   $('.nav-demand-ul').css('display','none');
-  // });
-
-  $('.fa-caret-down').on('click', () => {
-
-  })
-
-
-})
-
-
 // Get the modal
 var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("menu-btn");
+var btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];

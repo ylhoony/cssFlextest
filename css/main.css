@@ -5,7 +5,10 @@
 #FF7733 / rgb(255, 119, 51) - Orange Type Main
 #3738CC / rgb(55, 56, 204) - Blue Type
 #8A8AB2 / rgb(138, 138, 178) - Light Blue Grey
-#21252B / rgb(33, 37, 43) - dark grey*/
+#21252B / rgb(33, 37, 43) - dark grey
+#5D980F / rgb(93,152,15) - green
+#f6f6f6 /
+*/
 
 
 * {
@@ -13,7 +16,7 @@
 }
 
 body {
-  background-color: #eee;
+  background-color: #f6f6f6;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   margin: 0;
 }
@@ -44,7 +47,6 @@ body {
   flex-flow: row wrap;
   justify-content: flex-start;
   padding: 0;
-  /*position: relative;*/  /*dropdown test*/
 }
 
 .nav-list {
@@ -68,6 +70,10 @@ body {
 
 .nav-search li {
   width: 100%;
+}
+
+.nav-icon .menu-bar {
+  cursor: pointer;
 }
 
 .nav-icon li i {
@@ -129,38 +135,244 @@ body {
   width: 100%;
 }
 
-.main-section,
-.demand-section {
+.main-section
+/*.demand-section*/ {
   border: 1px solid rgba(138, 138, 178, .75);
   border-radius: 5px;
   width: 100%;
   margin-bottom: 20px;
 }
 
-.main-section h3,
-.demand-section h3 {
+.main-section h3
+/*.demand-section h3*/ {
   background-color: rgba(138, 138, 178, .25);
   border-bottom: 1px solid rgba(138, 138, 178, .75);
+  padding-left: 10px;
 }
 
-.main-section article,
-.demand-section article {
-  /*border: 1px solid green;*/
+.main-section h3 a,
+.main-section h3 a:visited
+/*.demand-section h3 a,
+.demand-section h3 a:visited*/ {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-section h3 a:hover {
+  /*color: rgb(138, 138, 178);*/
+  color: rgb(55, 56, 204);
+}
+
+.main-section article
+/*.demand-section article*/ {
   align-items: center;
   display: flex;
   justify-content: center;
   flex-flow: column wrap;
   margin: 0 auto;
-
   padding: 20px;
 }
 
 .main-section article div {
-  border: 1px solid blue;
+  border: 1px solid rgba(93, 152, 15, .75);
   padding: 20px;
   text-align: center;
   width: 100%;
+  border-radius: 5px;
 }
+
+/* ----Breadcrumb Layout--------------------------*/
+.main-breadcrumb {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.main-breadcrumb article ul {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.main-breadcrumb article ul li {
+  padding: 0 10px;
+  font-size: 0.8em;
+}
+
+
+/* ----SEARCH Layout--------------------------*/
+
+
+
+/* ----SEARCH Layout--------------------------*/
+
+.search-section {
+  border: 1px solid rgba(138, 138, 178, .75);
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.search-section form {
+  display: flex;
+  flex-flow: column wrap;
+  /*justify-content: center;*/
+  align-items: center;
+}
+
+.search-section form .search-header {
+  background-color: rgba(138, 138, 178, .2);
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  width: 100%
+}
+
+.search-section form .search-header div {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.search-header div i {
+  cursor: pointer;
+}
+
+.search-header div .fa-caret-right {
+  display: none;
+}
+
+.search-section form .search-header button {
+  background-color: rgba(33, 37, 43, 1);
+  border-radius: 3px;
+  color: #eee;
+  font-size: 0.8em;
+  margin-left: 10px;
+}
+
+.search-section form .search-header button:hover {
+  cursor: pointer;
+}
+
+.search-section form .search-input {
+  padding: 10px;
+}
+
+.search-footer {
+  align-items: center;
+  background-color: rgba(138, 138, 178, .2);
+  display: flex;
+  flex-flow: row wrap;
+  height: 32.361px;
+  justify-content: flex-end;
+  padding: 0 10px;
+  width: 100%;
+
+}
+
+.search-footer div {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.search-footer div button {
+  background-color: rgba(33, 37, 43, 1);
+  border-radius: 3px;
+  color: #eee;
+  font-size: 0.8em;
+  margin-left: 10px;
+}
+
+
+/* ------SEARCH END------------------------*/
+
+
+
+
+/*--------- MODAL TEST --------*/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/* MODAL TEST END */
+
+
+
+
+
 
 
 /* Login Page */
@@ -278,7 +490,7 @@ body {
     color: black;
     display: block;
     line-height: normal;
-    padding: 10px;
+    padding: 15px 10px;
     text-decoration: none;
     text-align: left;
     width: 100%;
